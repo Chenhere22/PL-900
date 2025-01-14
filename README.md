@@ -1,1 +1,7 @@
 # PL-900
+Microsoft Power Platform Fundamentals (PL-900) consists of:
+Microsoft Power Platform
+Automated Solutions
+Power BI & Power Virtual Agents
+
+I have attended 6 hours training on 13.01.2025 by DataScientest and now I am preparing for the mock exam to earn PL-900 certificate.
