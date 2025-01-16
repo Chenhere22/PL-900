@@ -31,3 +31,5 @@ Intuitive Buttons
 + (Add) button to create a new record.
 × (Cancel) button to discard unsaved changes.
 ✓ (Save) button to confirm and save new or edited details.
+
+Microsoft Power Automate (Flow) diagram that starts by running a flow from Copilot, then evaluates a condition. Depending on whether the condition is true or false, the flow branches into two different paths. Both paths include steps to send an email (labeled “Send an email (V2)” or “Send an email (V2) 1”) and then respond back to Copilot (labeled “Respond to Copilot 1” or “Respond to Copilot 2”). Essentially, it’s a simple conditional workflow that sends different emails and Copilot responses based on the outcome of the condition.
