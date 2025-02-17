@@ -48,4 +48,8 @@ A low-code solution developed using **Power Apps** and **Power Automate** to str
 - **Dropdowns**: Predefined `Business Sector` options (e.g., Banking, Healthcare) for standardized data entry.  
 - **Form Validation**:  
   ```powerapps  
-  If(IsBlank(FirstName.Text), "First Name is required", "")  
+  If(IsBlank(FirstName.Text), "First Name is required", "")
+
+---
+
+The mock exam and real exam will be completed before 3.March.2025
