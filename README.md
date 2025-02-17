@@ -1,35 +1,51 @@
-# Microsoft Power Platform Fundamentals (PL-900)
-Microsoft Power Platform Fundamentals (PL-900) consists of:
-Microsoft Power Platform
-Automated Solutions
-Power BI & Power Virtual Agents
+# Microsoft Power Platform Fundamentals (PL-900) Certification Preparation
 
-Power Platform: Power Apps, Power Automate and Copilot Studio.
+## Certification Overview  
+The **Microsoft Power Platform Fundamentals (PL-900)** certification validates foundational knowledge of the Microsoft Power Platform ecosystem, including its core components and use cases for building automated solutions. Key focus areas include:  
+- **Power Platform Architecture**: Power Apps, Power Automate, Power BI, and Copilot Studio.  
+- **Solution Development**: Designing low-code applications, automating workflows, and integrating AI-driven chatbots.  
+- **Analytics & Business Intelligence**: Leveraging Power BI for data visualization and insights.  
 
-I have attended 6 hours training on 13.01.2025 by DataScientest and now I am preparing for the mock exam to earn PL-900 certificate.
+## Training & Preparation  
+- Completed a 6-hour instructor-led training session hosted by **DataScientest** on **13.01.2025**, covering platform fundamentals, use cases, and hands-on exercises.  
+- Currently preparing for the PL-900 mock exam, focusing on practical implementation scenarios and platform capabilities.  
 
-The attachement includes Power Apps, Power Automate create Chatbot with Power Automate.
+---
 
-1. Li_App
-This repository contains a simple client/contact management application (nicknamed Li_App) that enables users to manage client information, including first name, last name, email address, and business sector. The screenshot above illustrates the app’s layout and key features.
+## Project: Client Management Application (Li_App)  
+A low-code solution developed using **Power Apps** and **Power Automate** to streamline client/contact management.  
 
-Features
-Contact List
+### Technical Implementation  
+#### **Core Components**  
+1. **Power Apps Canvas App**  
+   - **UI Framework**: Responsive design for client data management.  
+   - **Data Source**: Connects to a Microsoft Dataverse table for structured storage.  
 
-Displays clients and their details in a neatly organized list.
-Each contact entry shows the individual’s full name, last name, and email address.
-Add New Clients
+2. **Power Automate Workflow**  
+   - Integrated with **Copilot Studio** to enable conditional logic for email automation.  
 
-A form allows you to quickly add a new client.
-Required fields (e.g., Client name, Contact) are marked with an asterisk (*).
-Additional information such as the client’s sector (e.g., Banking) can be selected from a dropdown list.
-Edit or Remove Existing Contacts
+#### **Repository Structure**  
+- `Li_App`:  
+  - Power Apps project files (screens, components, formulas).  
+  - Power Automate flows (JSON definitions).  
+- Documentation: Screenshots, entity schemas, and workflow diagrams.  
 
-Click on a contact entry to access edit options or remove the contact from the list.
-Intuitive Buttons
+---
 
-+ (Add) button to create a new record.
-× (Cancel) button to discard unsaved changes.
-✓ (Save) button to confirm and save new or edited details.
+### Key Features & Technical Specifications  
+#### **1. User Interface (Power Apps)**  
+- **Contact List View**  
+  - Grid layout displaying client metadata: `Full Name`, `Email`, `Business Sector`.  
+  - Dynamic filtering and sorting capabilities.  
+- **CRUD Operations**  
+  - **Create**: Input form with validation (required fields marked `*`).  
+  - **Update/Delete**: Contextual buttons for inline editing (`Edit`, `Remove`).  
+- **UI Controls**  
+  - `+` Button: Triggers `NewForm()` function for record creation.  
+  - `✓` and `×` Buttons: `SubmitForm()` and `ResetForm()` actions for data integrity.  
 
-Microsoft Power Automate (Flow) diagram that starts by running a flow from Copilot, then evaluates a condition. Depending on whether the condition is true or false, the flow branches into two different paths. Both paths include steps to send an email (labeled “Send an email (V2)” or “Send an email (V2) 1”) and then respond back to Copilot (labeled “Respond to Copilot 1” or “Respond to Copilot 2”). Essentially, it’s a simple conditional workflow that sends different emails and Copilot responses based on the outcome of the condition.
+#### **2. Data Validation & Business Logic**  
+- **Dropdowns**: Predefined `Business Sector` options (e.g., Banking, Healthcare) for standardized data entry.  
+- **Form Validation**:  
+  ```powerapps  
+  If(IsBlank(FirstName.Text), "First Name is required", "")  
